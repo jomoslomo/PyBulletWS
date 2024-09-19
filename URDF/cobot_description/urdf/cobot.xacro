@@ -1,0 +1,140 @@
+<?xml version="1.0" ?>
+<robot name="cobot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find cobot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find cobot_description)/urdf/cobot.trans" />
+<xacro:include filename="$(find cobot_description)/urdf/cobot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-1.1580046200244058e-17 5.790023100122029e-18 0.024999999999999994" rpy="0 0 0"/>
+    <mass value="3.082687791334984"/>
+    <inertia ixx="0.002569" iyy="0.002569" izz="0.003853" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cobot_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cobot_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Link1_1">
+  <inertial>
+    <origin xyz="0.02283653671191256 0.0 0.042254276225913934" rpy="0 0 0"/>
+    <mass value="6.383618554951958"/>
+    <inertia ixx="0.008001" iyy="0.010215" izz="0.010193" ixy="0.0" iyz="-0.0" ixz="-0.001547"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cobot_description)/meshes/Link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cobot_description)/meshes/Link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Link2_1">
+  <inertial>
+    <origin xyz="0.05960014559509928 0.0 0.029646973179353442" rpy="0 0 0"/>
+    <mass value="9.466306346286949"/>
+    <inertia ixx="0.019973" iyy="0.023271" izz="0.015131" ixy="-0.0" iyz="0.0" ixz="-0.00474"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.075 0.0 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cobot_description)/meshes/Link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.075 0.0 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cobot_description)/meshes/Link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Link3_1">
+  <inertial>
+    <origin xyz="-0.018395006966072047 2.70267529470481e-17 0.0566049930339278" rpy="0 0 0"/>
+    <mass value="7.924962450619444"/>
+    <inertia ixx="0.012767" iyy="0.015628" izz="0.012767" ixy="0.0" iyz="0.0" ixz="0.003099"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.15 -0.0 -0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cobot_description)/meshes/Link3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.15 -0.0 -0.2" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cobot_description)/meshes/Link3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Link4_1">
+  <inertial>
+    <origin xyz="-0.04225427622591337 -5.592073952616691e-18 0.022836536711913324" rpy="0 0 0"/>
+    <mass value="6.383618554951956"/>
+    <inertia ixx="0.010193" iyy="0.010215" izz="0.008001" ixy="-0.0" iyz="0.0" ixz="0.001547"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.075 -0.0 -0.275" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cobot_description)/meshes/Link4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.075 -0.0 -0.275" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find cobot_description)/meshes/Link4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Joint1" type="continuous">
+  <origin xyz="0.0 0.0 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Link1_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="Joint2" type="continuous">
+  <origin xyz="0.075 -0.0 0.05" rpy="0 0 0"/>
+  <parent link="Link1_1"/>
+  <child link="Link2_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Joint3" type="continuous">
+  <origin xyz="0.075 0.0 0.1" rpy="0 0 0"/>
+  <parent link="Link2_1"/>
+  <child link="Link3_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="Joint4" type="continuous">
+  <origin xyz="-0.075 0.0 0.075" rpy="0 0 0"/>
+  <parent link="Link3_1"/>
+  <child link="Link4_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+</robot>

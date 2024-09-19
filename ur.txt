@@ -1,0 +1,204 @@
+[Link]
+name: base_link
+mass: 1.0
+inertia: 0.01 0.0 0.0 0.01 0.0 0.01
+origin: 0 0 0.025 0 0 0
+visual: meshes/Base.stl 0 0 0.025 0 0 0 1 1 1 gray 0.5 0.5 0.5 1.0
+collision: meshes/Base.stl 0 0 0.025 0 0 0 1 1 1
+
+[Joint]
+name: joint1
+type: revolute
+parent: base_link
+child: link1
+origin: 0 0 0.05 0 0 0
+axis: 0 0 1
+limit: -3.14 3.14 10.0 1.0
+dynamics: 0.1 0.01
+visual: meshes/Joint1.stl 0 0 0 0 0 0 1 1 1 green 0.0 1.0 0.0 1.0  # Correct origin and color
+collision: meshes/Joint1.stl 0 0 0 0 0 0 1 1 1
+
+[Link]
+name: link1
+mass: 1.0
+inertia: 0 0 0 0 0 0
+origin: 0 0 0 0 0 0
+visual: meshes/Link1.stl 0 0 0.1 0 0 0 1 1 1 blue 0.0 0.0 1.0 1.0
+collision: meshes/Link1.stl 0 0 0.1 0 0 0 1 1 1
+
+[Joint]
+name: joint2
+type: revolute
+parent: link1
+child: link2
+origin: 0 0 0.31 0 0 0
+axis: 0 1 0
+limit: -1.57 1.57 10.0 1.0
+dynamics: 0.1 0.01
+visual: meshes/Joint2.stl 0 0 0 0 0 0 1 1 1 green 0.0 1.0 0.0 1.0
+collision: meshes/Joint2.stl 0 0 0 0 0 0 1 1 1
+
+[Link]
+name: link2
+mass: 1.0
+inertia: 0.01 0.0 0.0 0.01 0.0 0.01
+origin: 0 0 0.075 0 0 0
+visual: meshes/Link2.stl 0 0 0.075 0 0 0 1 1 1 green 0.0 1.0 0.0 1.0
+collision: meshes/Link2.stl 0 0 0.075 0 0 0 1 1 1
+
+[Joint]
+name: joint3
+type: revolute
+parent: link2
+child: link3
+origin: 0 0 0.315 0 0 0
+axis: 0 0 1
+limit: -3.14 3.14 10.0 1.0
+dynamics: 0.1 0.01
+visual: meshes/Joint3.stl 0 0 0 0 0 0 1 1 1 yellow 1.0 1.0 0.0 1.0
+collision: meshes/Joint3.stl 0 0 0 0 0 0 1 1 1
+
+[Link]
+name: link3
+mass: 1.0
+inertia: 0.01 0.0 0.0 0.01 0.0 0.01
+origin: 0 0 0.075 0 0 0
+visual: meshes/Link3.stl 0 0 0.075 0 0 0 1 1 1 yellow 1.0 1.0 0.0 1.0
+collision: meshes/Link3.stl 0 0 0.075 0 0 0 1 1 1
+
+[Joint]
+name: joint4
+type: revolute
+parent: link3
+child: link4
+origin: 0 0 0.45 0 0 0
+axis: 0 1 0
+limit: -1.57 1.57 10.0 1.0
+dynamics: 0.1 0.01
+visual: meshes/Joint4.stl 0 0 0 0 0 0 1 1 1 orange 1.0 0.5 0.0 1.0
+collision: meshes/Joint4.stl 0 0 0 0 0 0 1 1 1
+
+[Link]
+name: link4
+mass: 1.0
+inertia: 0.01 0.0 0.0 0.01 0.0 0.01
+origin: 0 0 0.075 0 0 0
+visual: meshes/Link4.stl 0 0 0.075 0 0 0 1 1 1 orange 1.0 0.5 0.0 1.0
+collision: meshes/Link4.stl 0 0 0.075 0 0 0 1 1 1
+
+[Joint]
+name: joint5
+type: revolute
+parent: link4
+child: link5
+origin: 0 0 0.6 0 0 0
+axis: 0 0 1
+limit: -3.14 3.14 10.0 1.0
+dynamics: 0.1 0.01
+visual: meshes/Joint5.stl 0 0 0 0 0 0 1 1 1 purple 0.5 0.0 0.5 1.0
+collision: meshes/Joint5.stl 0 0 0 0 0 0 1 1 1
+
+[Link]
+name: link5
+mass: 1.0
+inertia: 0.01 0.0 0.0 0.01 0.0 0.01
+origin: 0 0 0.075 0 0 0
+visual: meshes/Link5.stl 0 0 0.075 0 0 0 1 1 1 purple 0.5 0.0 0.5 1.0
+collision: meshes/Link5.stl 0 0 0.075 0 0 0 1 1 1
+
+[Joint]
+name: joint6
+type: revolute
+parent: link5
+child: link6
+origin: 0 0 0.75 0 0 0
+axis: 0 1 0
+limit: -1.57 1.57 10.0 1.0
+dynamics: 0.1 0.01
+visual: meshes/Joint6.stl 0 0 0 0 0 0 1 1 1 cyan 0.0 1.0 1.0 1.0
+collision: meshes/Joint6.stl 0 0 0 0 0 0 1 1 1
+
+[Link]
+name: link6
+mass: 1.0
+inertia: 0.01 0.0 0.0 0.01 0.0 0.01
+origin: 0 0 0.075 0 0 0
+visual: meshes/Link6.stl 0 0 0.075 0 0 0 1 1 1 cyan 0.0 1.0 1.0 1.0
+collision: meshes/Link6.stl 0 0 0.075 0 0 0 1 1 1
+
+[Joint]
+name: joint7
+type: revolute
+parent: link6
+child: link7
+origin: 0 0 0.9 0 0 0
+axis: 0 0 1
+limit: -3.14 3.14 10.0 1.0
+dynamics: 0.1 0.01
+visual: meshes/Joint7.stl 0 0 0 0 0 0 1 1 1 pink 1.0 0.0 1.0 1.0
+collision: meshes/Joint7.stl 0 0 0 0 0 0 1 1 1
+
+[Link]
+name: link7
+mass: 1.0
+inertia: 0.01 0.0 0.0 0.01 0.0 0.01
+origin: 0 0 0.05 0 0 0
+visual: meshes/Link7.stl 0 0 0.05 0 0 0 1 1 1 pink 1.0 0.0 1.0 1.0
+collision: meshes/Link7.stl 0 0 0.05 0 0 0 1 1 1
+
+[Joint]
+name: joint_hand
+type: fixed
+parent: link7
+child: hand
+origin: 0 0 0.1 0 0 0
+visual: meshes/Joint_Hand.stl 0 0 0 0 0 0 1 1 1 red 1.0 0.0 0.0 1.0
+collision: meshes/Joint_Hand.stl 0 0 0 0 0 0 1 1 1
+
+[Link]
+name: hand
+mass: 0.5
+inertia: 0.01 0.0 0.0 0.01 0.0 0.01
+origin: 0 0 0.03 0 0 0
+visual: meshes/Hand.stl 0 0 0.03 0 0 0 1 1 1 red 1.0 0.0 0.0 1.0
+collision: meshes/Hand.stl 0 0 0.03 0 0 0 1 1 1
+
+[Link]
+name: finger1
+mass: 0.1
+inertia: 0.01 0.0 0.0 0.01 0.0 0.01
+origin: 0 0 0.05 0 0 0
+visual: meshes/Finger1.stl 0 0 0.05 0 0 0 1 1 1 cyan 0.0 1.0 1.0 1.0
+collision: meshes/Finger1.stl 0 0 0.05 0 0 0 1 1 1
+
+[Joint]
+name: finger1_joint
+type: prismatic
+parent: hand
+child: finger1
+origin: 0.064 0 0.086 0 0 0
+axis: 1 0 0
+limit: 0 0.05 5.0 0.5
+dynamics: 0.1 0.01
+visual: meshes/Joint_Finger1.stl 0 0 0 0 0 0 1 1 1 cyan 0.0 1.0 1.0 1.0
+collision: meshes/Joint_Finger1.stl 0 0 0 0 0 0 1 1 1
+
+[Link]
+name: finger2
+mass: 0.1
+inertia: 0.01 0.0 0.0 0.01 0.0 0.01
+origin: 0 0 0.05 0 0 0
+visual: meshes/Finger2.stl 0 0 0.05 0 0 0 1 1 1 magenta 1.0 0.0 1.0 1.0
+collision: meshes/Finger2.stl 0 0 0.05 0 0 0 1 1 1
+
+[Joint]
+name: finger2_joint
+type: prismatic
+parent: hand
+child: finger2
+origin: -0.064 0 0.086 0 0 0
+axis: 1 0 0
+limit: 0 0.05 5.0 0.5
+dynamics: 0.1 0.01
+visual: meshes/Joint_Finger2.stl 0 0 0 0 0 0 1 1 1 magenta 1.0 0.0 1.0 1.0
+collision: meshes/Joint_Finger2.stl 0 0 0 0 0 0 1 1 1

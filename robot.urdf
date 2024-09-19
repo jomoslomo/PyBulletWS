@@ -1,0 +1,515 @@
+<?xml version="1.0" ?>
+<robot name="robot_v4">
+
+    <!-- Link: base_link -->
+    <link name="base_link">
+        <inertial>
+            <origin xyz="0 0 0.025" rpy="0 0 0"/>
+            <mass value="1.0"/>
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0.025" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Base.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="gray">
+                <color rgba="0.5 0.5 0.5 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.025" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Base.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Link: link1 -->
+    <link name="link1">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="1.0"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0.1" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Link1.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="blue">
+                <color rgba="0.0 0.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.1" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Link1.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Link: link2 -->
+    <link name="link2">
+        <inertial>
+            <origin xyz="0 0 0.075" rpy="0 0 0"/>
+            <mass value="1.0"/>
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0.075" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Link2.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="green">
+                <color rgba="0.0 1.0 0.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.075" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Link2.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Link: link3 -->
+    <link name="link3">
+        <inertial>
+            <origin xyz="0 0 0.075" rpy="0 0 0"/>
+            <mass value="1.0"/>
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0.075" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Link3.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="yellow">
+                <color rgba="1.0 1.0 0.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.075" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Link3.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Link: link4 -->
+    <link name="link4">
+        <inertial>
+            <origin xyz="0 0 0.075" rpy="0 0 0"/>
+            <mass value="1.0"/>
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0.075" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Link4.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="1.0 0.5 0.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.075" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Link4.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Link: link5 -->
+    <link name="link5">
+        <inertial>
+            <origin xyz="0 0 0.075" rpy="0 0 0"/>
+            <mass value="1.0"/>
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0.075" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Link5.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="purple">
+                <color rgba="0.5 0.0 0.5 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.075" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Link5.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Link: link6 -->
+    <link name="link6">
+        <inertial>
+            <origin xyz="0 0 0.075" rpy="0 0 0"/>
+            <mass value="1.0"/>
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0.075" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Link6.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="cyan">
+                <color rgba="0.0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.075" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Link6.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Link: link7 -->
+    <link name="link7">
+        <inertial>
+            <origin xyz="0 0 0.05" rpy="0 0 0"/>
+            <mass value="1.0"/>
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0.05" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Link7.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="pink">
+                <color rgba="1.0 0.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.05" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Link7.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Link: hand -->
+    <link name="hand">
+        <inertial>
+            <origin xyz="0 0 0.03" rpy="0 0 0"/>
+            <mass value="0.5"/>
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0.03" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Hand.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="red">
+                <color rgba="1.0 0.0 0.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.03" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Hand.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Link: finger1 -->
+    <link name="finger1">
+        <inertial>
+            <origin xyz="0 0 0.05" rpy="0 0 0"/>
+            <mass value="0.1"/>
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0.05" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Finger1.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="cyan">
+                <color rgba="0.0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.05" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Finger1.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Link: finger2 -->
+    <link name="finger2">
+        <inertial>
+            <origin xyz="0 0 0.05" rpy="0 0 0"/>
+            <mass value="0.1"/>
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0.05" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Finger2.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="magenta">
+                <color rgba="1.0 0.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.05" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Finger2.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- Joint: joint1 -->
+    <joint name="joint1" type="revolute">
+        <parent link="base_link"/>
+        <child link="link1"/>
+        <origin xyz="0 0 0.05" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-3.14" upper="3.14" effort="10.0" velocity="1.0"/>
+        <dynamics damping="0.1" friction="0.01"/>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint1.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="green">
+                <color rgba="0.0 1.0 0.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint1.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </joint>
+
+    <!-- Joint: joint2 -->
+    <joint name="joint2" type="revolute">
+        <parent link="link1"/>
+        <child link="link2"/>
+        <origin xyz="0 0 0.31" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-1.57" upper="1.57" effort="10.0" velocity="1.0"/>
+        <dynamics damping="0.1" friction="0.01"/>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint2.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="green">
+                <color rgba="0.0 1.0 0.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint2.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </joint>
+
+    <!-- Joint: joint3 -->
+    <joint name="joint3" type="revolute">
+        <parent link="link2"/>
+        <child link="link3"/>
+        <origin xyz="0 0 0.315" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-3.14" upper="3.14" effort="10.0" velocity="1.0"/>
+        <dynamics damping="0.1" friction="0.01"/>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint3.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="yellow">
+                <color rgba="1.0 1.0 0.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint3.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </joint>
+
+    <!-- Joint: joint4 -->
+    <joint name="joint4" type="revolute">
+        <parent link="link3"/>
+        <child link="link4"/>
+        <origin xyz="0 0 0.45" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-1.57" upper="1.57" effort="10.0" velocity="1.0"/>
+        <dynamics damping="0.1" friction="0.01"/>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint4.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="orange">
+                <color rgba="1.0 0.5 0.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint4.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </joint>
+
+    <!-- Joint: joint5 -->
+    <joint name="joint5" type="revolute">
+        <parent link="link4"/>
+        <child link="link5"/>
+        <origin xyz="0 0 0.6" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-3.14" upper="3.14" effort="10.0" velocity="1.0"/>
+        <dynamics damping="0.1" friction="0.01"/>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint5.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="purple">
+                <color rgba="0.5 0.0 0.5 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint5.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </joint>
+
+    <!-- Joint: joint6 -->
+    <joint name="joint6" type="revolute">
+        <parent link="link5"/>
+        <child link="link6"/>
+        <origin xyz="0 0 0.75" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="-1.57" upper="1.57" effort="10.0" velocity="1.0"/>
+        <dynamics damping="0.1" friction="0.01"/>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint6.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="cyan">
+                <color rgba="0.0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint6.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </joint>
+
+    <!-- Joint: joint7 -->
+    <joint name="joint7" type="revolute">
+        <parent link="link6"/>
+        <child link="link7"/>
+        <origin xyz="0 0 0.9" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-3.14" upper="3.14" effort="10.0" velocity="1.0"/>
+        <dynamics damping="0.1" friction="0.01"/>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint7.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="pink">
+                <color rgba="1.0 0.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint7.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </joint>
+
+    <!-- Joint: joint_hand -->
+    <joint name="joint_hand" type="fixed">
+        <parent link="link7"/>
+        <child link="hand"/>
+        <origin xyz="0 0 0.1" rpy="0 0 0"/>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint_Hand.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="red">
+                <color rgba="1.0 0.0 0.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint_Hand.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </joint>
+
+    <!-- Joint: finger1_joint -->
+    <joint name="finger1_joint" type="prismatic">
+        <parent link="hand"/>
+        <child link="finger1"/>
+        <origin xyz="0.064 0 0.086" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="0" upper="0.05" effort="5.0" velocity="0.5"/>
+        <dynamics damping="0.1" friction="0.01"/>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint_Finger1.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="cyan">
+                <color rgba="0.0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint_Finger1.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </joint>
+
+    <!-- Joint: finger2_joint -->
+    <joint name="finger2_joint" type="prismatic">
+        <parent link="hand"/>
+        <child link="finger2"/>
+        <origin xyz="-0.064 0 0.086" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit lower="0" upper="0.05" effort="5.0" velocity="0.5"/>
+        <dynamics damping="0.1" friction="0.01"/>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint_Finger2.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="magenta">
+                <color rgba="1.0 0.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="meshes/Joint_Finger2.stl" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </joint>
+
+</robot>

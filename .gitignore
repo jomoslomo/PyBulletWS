@@ -1,0 +1,26 @@
+# Ignore the virtual environment folder
+venv/
+
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Ignore backup or temporary files
+*.bak
+*.tmp
+*.log
+*.swp
+*.DS_Store
+
+# Ignore mesh files if they are auto-generated or large
+meshes/
+mesh_glb/
+
+# Ignore any compiled files (if applicable)
+*.so
+*.dll
+*.dylib
+*.exe
+
+# Ignore your IDE-specific files (if using any)
+.vscode/
